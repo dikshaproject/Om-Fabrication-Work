@@ -1,0 +1,518 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f5f5f5;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background: #111;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 7%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* Website Logo */
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* Navigation Menu */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+
+/* Navigation Links */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Navigation Hover Effect */
+
+nav a:hover {
+    color: #f5a623;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    /* Dark background */
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        ),
+        #444;
+
+    color: white;
+}
+
+
+/* Hero Content Width */
+
+.hero-content {
+    max-width: 800px;
+}
+
+
+/* Main Hero Heading */
+
+.hero h1 {
+
+    font-size: 52px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Hero Description */
+
+.hero p {
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Hero Buttons Container */
+
+.buttons {
+
+    margin-top: 30px;
+}
+
+
+/* Common Button */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    margin: 5px;
+
+    background: #f5a623;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+}
+
+
+/* Secondary Button */
+
+.btn.secondary {
+
+    background: white;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+
+    padding: 80px 7%;
+
+    text-align: center;
+}
+
+
+/* Section Heading */
+
+.section h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Section Description */
+
+.section-description {
+
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+
+    color: #666;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Individual Service Card */
+
+.service-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+
+/* Service Card Hover Effect */
+
+.service-card:hover {
+
+    transform: translateY(-8px);
+}
+
+
+/* Service Icon */
+
+.icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Service Heading */
+
+.service-card h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 22px;
+}
+
+
+/* ================= GALLERY / OUR WORK ================= */
+
+.work-section {
+
+    background: #eee;
+}
+
+
+/* Gallery Grid */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Individual Gallery Box */
+
+.gallery-item {
+
+    height: 250px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* ================= GALLERY IMAGES ================= */
+
+/* Image inside gallery */
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.3s;
+}
+
+
+/* Zoom image when mouse moves over it */
+
+.gallery-item img:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* ================= GALLERY CAPTION ================= */
+
+/* Caption shown below/on the image */
+
+.gallery-caption {
+
+    background: rgba(0, 0, 0, 0.75);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+}
+
+
+/* ================= PHOTO PLACEHOLDER ================= */
+
+/* Used for empty gallery spaces */
+
+.photo-placeholder {
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #ccc;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-section {
+
+    background: white;
+}
+
+
+/* About Section Paragraph */
+
+.about-section p {
+
+    max-width: 800px;
+
+    margin: 15px auto;
+
+    color: #555;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background: #111;
+
+    color: white;
+}
+
+
+/* Contact Heading */
+
+.contact-section h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Contact Buttons Container */
+
+.contact-buttons {
+
+    margin-top: 30px;
+}
+
+
+/* Contact Button */
+
+.contact-btn {
+
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    margin: 5px;
+
+    background: #f5a623;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+}
+
+
+/* WhatsApp Button */
+
+.contact-btn.whatsapp {
+
+    background: #25D366;
+
+    color: white;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    background: #000;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* These settings apply when screen width is 768px or smaller */
+
+@media (max-width: 768px) {
+
+    /* Header becomes vertical */
+
+    header {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    /* Navigation wraps to next line */
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    /* Smaller hero heading on mobile */
+
+    .hero h1 {
+
+        font-size: 38px;
+    }
+
+
+    /* Services become one column */
+
+    .services-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Gallery becomes one column */
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+    }
+
+}
